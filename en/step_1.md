@@ -23,26 +23,45 @@ If you have never soldered before, and need some help, then have a look at our [
 
 --- /step ---
 
-[[[rpi-aiy-voice-assemble]]]
-
 --- step ---
 ## Setting up the hardware
 
 You can follow the [build guide on the Google AIY website](https://aiyprojects.withgoogle.com/voice/#assembly-guide-4-put-it-all-together) if you want. However, it uses the carboard box to house the kit, and this will restrict access to the GPIO pins. If you want to follow a simplere guide then you can use the instructions below.
 
 --- collapse ---
-- 
+[[[rpi-aiy-voice-assemble]]] 
 --- /collapse ---
-
 --- /step ---
 
---- step ---
+--- step --- 
 ## Install the Software
 
+If you like, you can install the software for the Voice Kit manually. Google have [this guide](https://aiyprojects.withgoogle.com/voice/#makers-guide) to take you through the process. It is far easier, however, to use their image on an SD card.
+
+You can download [their image here](https://dl.google.com/dl/aiyprojects/voice/aiyprojects-latest.img.xz), and if you want guidance on how to burn an image to an SD card then have a look at our [guide here](https://www.raspberrypi.org/learning/software-guide/quickstart/)
+
+The Google image comes as `.xz` file. To extart this on Linux you can install `unxz`.
+
+``` bash
+sudo apt update && sudo apt install unxz -y
+unxz aiyprojects-2017-05-03.img.xz
+```
+
+On Windows or MacOS **Etcher** should handle this for you.
+
+Then just insert your SD card and boot your Raspberry Pi.
 --- /step ---
 
 --- step ---
-## Modify the Software
+Once your Raspberry Pi has booted, you're going to need some credentials from Google, for this to work. Follow the steps below to enable the Google Assistant API.
+
+--- collapse
+[[[generic-api-google-assistant]]]
+--- /collapse ---
+--- step ---
+## Test it's working
+
+With the hardware and software all set up, you need to test that your Voice Kit is working.
 
 --- /step ---
 
