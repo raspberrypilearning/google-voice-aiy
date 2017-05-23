@@ -1,3 +1,24 @@
+## Controlling the World with Google AIY
+
+The Google AIY Voice Kit came free with the May, 2017 issue of the MagPi, so well done if you have managed to aquire one. If you haven't yet managed to get a Voice Kit, then you can join a waiting list to receive a notification when they are available by signing up [here](https://docs.google.com/forms/d/e/1FAIpQLSev7IQBFUaDlv5tx1Decxd5Ya5AqYSEvD72hJySeaRDogaqAw/viewform?c=0&w=1)
+
+--- step ---
+## Setup the AIY HAT
+
+In this project you're going to use the Voice Kit to make an LED blink via voice command, and if you can blink and LED then there really are very few limits on what you can control.
+--- /step ---
+
+--- step ---
+## Install the Software
+
+--- /step ---
+
+--- step ---
+## Modify the Software
+
+--- /step ---
+
+
 # New project
 
 Each project contains a set of directories for each language, you're set up now with an `en` directory that contains the necessary files to get you going.
