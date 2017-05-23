@@ -3,9 +3,37 @@
 The Google AIY Voice Kit came free with the May, 2017 issue of the MagPi, so well done if you have managed to aquire one. If you haven't yet managed to get a Voice Kit, then you can join a waiting list to receive a notification when they are available by signing up [here](https://docs.google.com/forms/d/e/1FAIpQLSev7IQBFUaDlv5tx1Decxd5Ya5AqYSEvD72hJySeaRDogaqAw/viewform?c=0&w=1)
 
 --- step ---
-## Setup the AIY HAT
+## Solder on header pins
 
-In this project you're going to use the Voice Kit to make an LED blink via voice command, and if you can blink and LED then there really are very few limits on what you can control.
+In this project you're going to use the Voice Kit to make an LED blink with a voice command. If you can blink an LED then there really are very few limits on what you can control.
+
+The first thing to do is to set up the Voice Kit HAT. As you will be blinking an LED, you will need to use some soldered header pins to allow you to access the GPIO pins of the Raspberry Pi
+
+You can solder a set of three header pins to the holes on the board that are in the column of **Drivers**. In particular, you want row **1**.
+
+You can see the mapping of all the GPIO pins on the following schematic, in case you want to use different GPIO pin.
+
+![voice hat schematic](images/connections.jpg)
+
+And here is a photograh showing the three soldered header pins.
+
+![voice hat pins](images/soldered-header.jpg)
+
+If you have never soldered before, and need some help, then have a look at our [Getting Started With Soldering](https://www.raspberrypi.org/learning/getting-started-with-soldering/) resource.
+
+--- /step ---
+
+[[[rpi-aiy-voice-assemble]]]
+
+--- step ---
+## Setting up the hardware
+
+You can follow the [build guide on the Google AIY website](https://aiyprojects.withgoogle.com/voice/#assembly-guide-4-put-it-all-together) if you want. However, it uses the carboard box to house the kit, and this will restrict access to the GPIO pins. If you want to follow a simplere guide then you can use the instructions below.
+
+--- collapse ---
+- 
+--- /collapse ---
+
 --- /step ---
 
 --- step ---
