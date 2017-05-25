@@ -58,132 +58,127 @@ Once your Raspberry Pi has booted, you're going to need some credentials from Go
 --- collapse
 [[[generic-api-google-assistant]]]
 --- /collapse ---
+
+Your secrets file that you downloaded will be called something like `client_secret_89351974213-jsno1i2s7lu9mv4q9bjbf3pas6cpnbe5.apps.googleusercontent.com.json`. This needs renaming and placing in your `/home/pi` directory. The new name should be `assistant.json`.
+
 --- step ---
-## Test it's working
+
+## Test it's working ##
 
 With the hardware and software all set up, you need to test that your Voice Kit is working.
 
+- Click on the **Start dev terminal** icon on the desktop, to open a terminal.
+
+![icon](images/dev-ico.png)
+
+- To start the program manually you can simply type `src/main.py` into the *Terminal**
+
+- If this is the first time you have run the program, **Chromium** will open and ask you to login and authorise the use of the Google API.
+
+![google auth](images/api-consent-screen.png)
+
+- Click **ALLOW** to enable access to the API. Now you should be able to use the button to begin capturing your voice commands. There are several built in instructions that you can use. Try saying any of the following after pushing the button:
+  - *"What are the three laws of robotics"*
+  - *"What is the time?"*
+  - *"IP Address"*
+
+- You can also ask it questions that will result in a simple Google search
+  - *"Who is the Prime Minister"*
+  - *"What is the air-speed velocity of an unladen swallow"*
+  
+- Have a good play with the device before learning how to hack it to create your own voice commands.
 --- /step ---
 
+--- step ---
+## Simple voice responses
 
-# New project
+The AIY Voice kit software allows you to add your own simple voice commands that will provide simple responses.
 
-Each project contains a set of directories for each language, you're set up now with an `en` directory that contains the necessary files to get you going.
+- Using a text editor or IDLE, openthe file called `action.py`. You can find it at `/home/pi/voice-recognizer-raspi/action.py`.
 
-* [meta.yml](#metayml)
-* [Steps - step_1.md, step_2.md, etc](#steps)
+- Most of this file contains instructions on how to use it, but if you scroll past the first set of comments, you should see the following code:
 
+``` python
+class SpeakAction(object):
 
-## meta.yml
+    """Says the given text via TTS."""
 
-The `meta.yml` file sets lots of basic information for the project.
+    def __init__(self, say, words):
+        self.say = say
+        self.words = words
 
-``` yml
-title: The title of the project
-hero_image: images/banner.png # The image used on the listing view
-subtitle: Project subtitle # Used on the listing view
-description: Project description # Used on the listing view
-published: false # A boolean - `true` or`false` - that controls whether the project will appear on the listing view
-steps: # A list of all the steps
-  - title: How to get started # Used as the sidebar title for the step
-    duration: 60 # Not used yet
+    def run(self, voice_command):
+        self.say(self.words)
+```
+- This `class` does a few simple things. Don't worry if you're not too familiar with classes, as understanding what it does is more important.
+  - The class starts by initialising (`__init__`) an object with two things. `self.say` is a special function defined in another file. This function handles all the complicated conversion of text to speech.
+    - The class also initiialises an object with `self.words`. This is again a sting, and represents what you want the Voice Kit to respond through the speaker. If `self.words` was the string `"I'm fine, thank you"`, then that is what the Voice Kit would respond.
+  - The class has a `run` method. This has a `voice_command` parameter. The `voice_command` are all the words that you speak into the microphone.
+  - In the run function are the actions that you need to be performed. In this case the `self.say(self.words` will just convert a string to speach for output through the speaker.
+  
+- To use this class, scroll down the code and have a look at the section where it says the following:
+
+``` python
+    # =========================================
+    # Makers! Add your own voice commands here.
+    # =========================================
 ```
 
-## Steps
+- Here's where you can add some simple voice commands and their associated responses. Underneath the comment, you can now add your own action. Try adding the following lines and make sure that you keep the indentation.
 
-* [Links](#links)
-* [Resources](#resources)
-* [Images](#images)
-* [Challenges](#challenges)
-* [Definitions](#definitions)
-* [Hints](#hints)
-* [Collapsed ingredients](#collapsed-ingredients)
-
-Project steps are written in the [Kramdown](https://kramdown.gettalong.org/) variety of markdown. There is a [quick reference guide](https://kramdown.gettalong.org/quickref.html) and [full syntax documentation](https://kramdown.gettalong.org/syntax.html). A [custom kramdown extension](https://github.com/RaspberryPiFoundation/kramdown_rpf) is used for hints, challenges & collapsed ingredients.
-
-### Links, resources & images
-
-See [kramdown documentation](https://kramdown.gettalong.org/quickref.html#links-and-images) for more details.
-
-#### Links
-
-A [link](http://kramdown.gettalong.org) to the kramdown homepage.
-
-#### Resources
-
-A [link to a file in the resources directory](resources/worksheet.pdf){:download='filename.pdf'}. The download part will make the file automatically download rather than be rendered in the browser, the filename you'd like the file to be saved with is the second bit after the `=`. The `/slash learning` application will ensure the resource is available.
-
-#### Images
-
-![Banner image](images/banner.png) - the link text becomes the alternative text for the image. The `/slash learning` application will ensure the image is available.
-
-#### Challenges
-
-``` markdown
---- challenge ---
-
-## Challenge: Improving your drum
-
-* Any markdown in here
-* will be parsed as normal
-
---- /challenge ---
+``` python
+    # =========================================
+    # Makers! Add your own voice commands here.
+    # =========================================
+	actor.add_keyword(_("what's up"), SpeakAction(say, "I'm fine, thank you"))
 ```
 
+- So what does this line do? `actor.add_keyword(_("what's up")` instructs the code to listen out for the keywords *"what's up"* to be spoken. When the keywords are recognised then the code within the `SpeakAction` class is run. What is passed in is the command the user spoke (`say`) and the string `"I'm fine, thank you"`. The `SpeakAction` code that you looked at earlier then outputs that tring through the microphone.
 
-### Definitions
+- Have a go at running this code, and test that it's working.
 
-Definitions can be written using HTML abbreviations, which are a standard part of [kramdown](https://kramdown.gettalong.org/quickref.html#abbreviations)
+- Now try adding your own set of keywords and responses underneath the one you have just written.
 
+--- /step ---
+
+## Making your own actions
+
+- An action is the thing that you want your voice kit to do. Below is about the most basic action you can come up with.
+
+```python
+class PrintHelloWorld():
+	"Prints Hello World!"
+
+	def run(self, voice_command):
+	    print("Hello World!")
 ```
-To do this you might require a variable or a two word definition.
 
-*[variable]: An object that has a name and stores a value.
+- All this will do is print `Hello World!` to the console when you run the program. If you add the following voice command in, you can test this out.
 
-*[two word]: Definitions are markdown, and can have [links](http://kramdown.gettalong.org) etc
+```python
+    actor.add_keyword(_("hello world"), PrintHelloWorld())
 ```
 
+- Have a play around with this an see what else you can get the voice kit to do.
 
-### Hints
+--- step ---
+## Controlling an LED
 
-A header for the hint, and all the html markup for hints will be automatically added.
+Now is your chance to try and make an LED turn on an off when an command is given. Alter the code so that when the command "LED" is spoken, the LED turns on, stays on for 5 seconds, then switches off.
 
-```
 --- hints ---
+
 --- hint ---
-
-Here's a hint of how to do this project.
-
-Any markdown you like within a hint:
-* item 1
-* item 2
-
---- /hint ---
---- hint ---
-Hint 2
-
---- /hint ---
---- hint ---
-
-Hint 3
---- /hint ---
---- hint ---
-Hint 4
+1. Wire up an LED and a resistor to the header pins you soldered on.
+2. Somewhere near the top of the file, you will need to import the `LED` class from the `gpiozero` module. You'll also want the `sleep` function from the `time` module.
+3. You will want to create an `led` object on pin 17.
+4. When the command to turn on the led is given, the `led.on()` method should be called, there should be a pause for a few seconds, then the `led.off()` method should be called.
 --- /hint ---
 
---- /hints ---
-```
+--- hint ---
+![circuit](images/led-circuit.png)
+--- /hint ---
 
-### Collapsed ingredients
-
-Set the title and the image from within the `collapse` area. The image must exist in **this** project, not the ingredient.
-
---- collapse ---
----
-title: Downloading and installing the Raspberry Pi software
-image: images/scratch.png
----
-
-[[[generic-scratch-new-project]]]
-
---- /collapse ---
+--- hint
+TODO - ADD IN SCREEN CAST MAKING THE FUNCTION
+--- /hint ---
