@@ -1,6 +1,6 @@
 ## Controlling the World with Google AIY
 
-The Google AIY Voice Kit came free with the May, 2017 issue of the MagPi, so well done if you have managed to aquire one. If you haven't yet managed to get a Voice Kit, then you can join a waiting list to receive a notification when they are available by signing up [here](https://docs.google.com/forms/d/e/1FAIpQLSev7IQBFUaDlv5tx1Decxd5Ya5AqYSEvD72hJySeaRDogaqAw/viewform?c=0&w=1)
+The Google AIY Voice Kit came free with the May, 2017 issue of the MagPi, so well done if you have managed to acquire one. If you haven't yet managed to get a Voice Kit, then you can join a waiting list to receive a notification when they are available by signing up [here](https://docs.google.com/forms/d/e/1FAIpQLSev7IQBFUaDlv5tx1Decxd5Ya5AqYSEvD72hJySeaRDogaqAw/viewform?c=0&w=1)
 
 --- step ---
 ## Solder on header pins
@@ -15,7 +15,7 @@ You can see the mapping of all the GPIO pins on the following schematic, in case
 
 ![voice hat schematic](images/connections.jpg)
 
-And here is a photograh showing the three soldered header pins.
+And here is a photograph showing the three soldered header pins.
 
 ![voice hat pins](images/soldered-header.jpg)
 
@@ -26,7 +26,7 @@ If you have never soldered before, and need some help, then have a look at our [
 --- step ---
 ## Setting up the hardware
 
-You can follow the [build guide on the Google AIY website](https://aiyprojects.withgoogle.com/voice/#assembly-guide-4-put-it-all-together) if you want. However, it uses the carboard box to house the kit, and this will restrict access to the GPIO pins. If you want to follow a simplere guide then you can use the instructions below.
+You can follow the [build guide on the Google AIY website](https://aiyprojects.withgoogle.com/voice/#assembly-guide-4-put-it-all-together) if you want. However, it uses the cardboard box to house the kit, and this will restrict access to the GPIO pins. If you want to follow a simple guide then you can use the instructions below.
 
 --- collapse ---
 [[[rpi-aiy-voice-assemble]]] 
@@ -40,7 +40,7 @@ If you like, you can install the software for the Voice Kit manually. Google hav
 
 You can download [their image here](https://dl.google.com/dl/aiyprojects/voice/aiyprojects-latest.img.xz), and if you want guidance on how to burn an image to an SD card then have a look at our [guide here](https://www.raspberrypi.org/learning/software-guide/quickstart/)
 
-The Google image comes as `.xz` file. To extart this on Linux you can install `unxz`.
+The Google image comes as `.xz` file. To extract this on Linux you can install `unxz`.
 
 ``` bash
 sudo apt update && sudo apt install unxz -y
@@ -69,7 +69,7 @@ With the hardware and software all set up, you need to test that your Voice Kit 
 
 - Click on the **Start dev terminal** icon on the desktop, to open a terminal.
 
-![icon](images/dev-ico.png)
+![icon](images/dev-icon.png)
 
 - To start the program manually you can simply type `src/main.py` into the *Terminal**
 
@@ -94,7 +94,7 @@ With the hardware and software all set up, you need to test that your Voice Kit 
 
 The AIY Voice kit software allows you to add your own simple voice commands that will provide simple responses.
 
-- Using a text editor or IDLE, openthe file called `action.py`. You can find it at `/home/pi/voice-recognizer-raspi/action.py`.
+- Using a text editor or IDLE, open the file called `action.py`. You can find it at `/home/pi/voice-recognizer-raspi/action.py`.
 
 - Most of this file contains instructions on how to use it, but if you scroll past the first set of comments, you should see the following code:
 
@@ -112,9 +112,9 @@ class SpeakAction(object):
 ```
 - This `class` does a few simple things. Don't worry if you're not too familiar with classes, as understanding what it does is more important.
   - The class starts by initialising (`__init__`) an object with two things. `self.say` is a special function defined in another file. This function handles all the complicated conversion of text to speech.
-    - The class also initiialises an object with `self.words`. This is again a sting, and represents what you want the Voice Kit to respond through the speaker. If `self.words` was the string `"I'm fine, thank you"`, then that is what the Voice Kit would respond.
+    - The class also initialises an object with `self.words`. This is again a sting, and represents what you want the Voice Kit to respond through the speaker. If `self.words` was the string `"I'm fine, thank you"`, then that is what the Voice Kit would respond.
   - The class has a `run` method. This has a `voice_command` parameter. The `voice_command` are all the words that you speak into the microphone.
-  - In the run function are the actions that you need to be performed. In this case the `self.say(self.words` will just convert a string to speach for output through the speaker.
+  - In the run function are the actions that you need to be performed. In this case the `self.say(self.words` will just convert a string to speech for output through the speaker.
   
 - To use this class, scroll down the code and have a look at the section where it says the following:
 
@@ -133,7 +133,7 @@ class SpeakAction(object):
 	actor.add_keyword(_("what's up"), SpeakAction(say, "I'm fine, thank you"))
 ```
 
-- So what does this line do? `actor.add_keyword(_("what's up")` instructs the code to listen out for the keywords *"what's up"* to be spoken. When the keywords are recognised then the code within the `SpeakAction` class is run. What is passed in is the command the user spoke (`say`) and the string `"I'm fine, thank you"`. The `SpeakAction` code that you looked at earlier then outputs that tring through the microphone.
+- So what does this line do? `actor.add_keyword(_("what's up")` instructs the code to listen out for the keywords *"what's up"* to be spoken. When the keywords are recognised then the code within the `SpeakAction` class is run. What is passed in is the command the user spoke (`say`) and the string `"I'm fine, thank you"`. The `SpeakAction` code that you looked at earlier then outputs that string through the microphone.
 
 - Have a go at running this code, and test that it's working.
 
@@ -156,7 +156,7 @@ class PrintHelloWorld():
 - All this will do is print `Hello World!` to the console when you run the program. If you add the following voice command in, you can test this out.
 
 ```python
-    actor.add_keyword(_("hello world"), PrintHelloWorld())
+    actor.add_keyword("hello world", PrintHelloWorld())
 ```
 
 - Have a play around with this an see what else you can get the voice kit to do.
@@ -164,7 +164,7 @@ class PrintHelloWorld():
 --- step ---
 ## Controlling an LED
 
-Now is your chance to try and make an LED turn on an off when an command is given. Alter the code so that when the command "LED" is spoken, the LED turns on, stays on for 5 seconds, then switches off.
+Now is your chance to try and make an LED turn on and off again when an command is given. Alter the code so that when the command "LED" is spoken, the LED turns on, stays on for 5 seconds, then switches off.
 
 --- hints ---
 
@@ -182,3 +182,88 @@ Now is your chance to try and make an LED turn on an off when an command is give
 --- hint
 TODO - ADD IN SCREEN CAST MAKING THE FUNCTION
 --- /hint ---
+--- /hints ---
+--- /step ---
+
+--- step ---
+## Getting some feedback
+
+It would be nice if you could get the class you have written to give some verbal feedback when the LED switches on and off again. To do this you will need to use that `say` function that was discussed earlier.
+
+To use the `say` function it needs to be included in the `actor.keyword` call. It can then be used in the class when you initialise the class.
+
+- First you can alter your command section of the script. The `ControlLED` needs to use the `say` function and to be passed a string.
+
+``` python
+    actor.add_keyword('LED', ControlLED(say, 'turning on LED'))
+```
+
+- Now that you're using some parameters with your `ControlLED` class, you need to make sure you can use them in the class' methods. You do this in the initialisation method.
+
+```python
+class ControlLED():
+    """Turns on an LED for 5 seconds"""
+
+    def __init__(self, say, response):
+        self.say = say
+        self.response = response
+```
+
+- Now within your `run` method you can call `self.say` and pass it `self.response`.
+
+``` python
+    def run(self, voice_command):
+        self.say(self.response)
+        led.on()
+        sleep(5)
+        led.off()
+```
+
+## Using `voice_command`
+
+Now that you can turn the LED on with a voice command, it would be nice if you could get it to stay on, until another voice command turns it off again.
+
+Here's the basic logic that you will need to follow.
+
+- If the keyword LED is used, then use the ControlLED class
+- If the `voice_command` contains the word **on** then turn the LED on
+- If the `voice_command` contains the word **off** then turn the LED off.
+
+You can have a look at the section below, to learn how to find a specific sequence of characters within a string using python, if you need help.
+
+--- collapse ---
+[[[generic-python-finding-substrings]]]
+--- /collapse ---
+
+--- hints ---
+--- hint ---
+- Your trigger should remain the same - listening for the LED key word.
+- Within the `run` method can use the `voice_command`. If the `voice_command` contains the string `on` then the LED can tun on. If the voice command contains the string `off` then the LED turns off
+--- /hint ---
+--- hint ---
+Here's a little code to get you started:
+``` pyton
+    def run(self, voice_command):
+		command = 
+		if "on" in command:
+			self.say('Turning LED on')
+			
+		elif #something here :
+			self.say('Turning LED off')
+```
+--- /hint ---
+--- hint ---
+Here's a little video showing you how to write the code.
+
+--- /hint ---
+--- /hints ---
+
+--- step ---
+--- challenge ---
+- Can you make the LED blink when the user asks it to blink?
+- Can you use voice commands to control the speed of the blinking?
+
+
+--- /challenge --
+--- step ---
+
