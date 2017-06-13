@@ -147,7 +147,7 @@ class SpeakAction(object):
 
 ```python
 class PrintHelloWorld():
-	"Prints Hello World!"
+	"""Prints Hello World!"""
 
 	def run(self, voice_command):
 	    print("Hello World!")
