@@ -185,7 +185,7 @@ Now is your chance to try and make an LED turn on and off again when an command 
 --- /hint ---
 
 --- hint ---
-![circuit](images/led-circuit.png)
+![circuit](images/led-circuit.jpg)
 --- /hint ---
 
 --- hint ---
