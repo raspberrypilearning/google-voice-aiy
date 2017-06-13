@@ -29,6 +29,9 @@ If you have never soldered before, and need some help, then have a look at our [
 You can follow the [build guide on the Google AIY website](https://aiyprojects.withgoogle.com/voice/#assembly-guide-4-put-it-all-together) if you want. However, it uses the cardboard box to house the kit, and this will restrict access to the GPIO pins. If you want to follow a simple guide then you can use the instructions below.
 
 --- collapse ---
+---
+title: Assembling the Voice Kit
+---
 [[[rpi-aiy-voice-assemble]]] 
 --- /collapse ---
 --- /step ---
@@ -56,14 +59,18 @@ Then just insert your SD card and boot your Raspberry Pi.
 Once your Raspberry Pi has booted, you're going to need some credentials from Google, for this to work. Follow the steps below to enable the Google Assistant API.
 
 --- collapse
+---
+title: Setting up the Assistance API
+---
 [[[generic-api-google-assistant]]]
 --- /collapse ---
 
 Your secrets file that you downloaded will be called something like `client_secret_89351974213-jsno1i2s7lu9mv4q9bjbf3pas6cpnbe5.apps.googleusercontent.com.json`. This needs renaming and placing in your `/home/pi` directory. The new name should be `assistant.json`.
 
+--- /step ---
 --- step ---
 
-## Test it's working ##
+## Test it's working
 
 With the hardware and software all set up, you need to test that your Voice Kit is working.
 
@@ -141,6 +148,7 @@ class SpeakAction(object):
 
 --- /step ---
 
+--- step ---
 ## Making your own actions
 
 - An action is the thing that you want your voice kit to do. Below is about the most basic action you can come up with.
@@ -160,6 +168,7 @@ class PrintHelloWorld():
 ```
 
 - Have a play around with this an see what else you can get the voice kit to do.
+--- /step ---
 
 --- step ---
 ## Controlling an LED
@@ -179,13 +188,14 @@ Now is your chance to try and make an LED turn on and off again when an command 
 ![circuit](images/led-circuit.png)
 --- /hint ---
 
---- hint
+--- hint ---
 TODO - ADD IN SCREEN CAST MAKING THE FUNCTION
 --- /hint ---
 --- /hints ---
 --- /step ---
 
 --- step ---
+
 ## Getting some feedback
 
 It would be nice if you could get the class you have written to give some verbal feedback when the LED switches on and off again. To do this you will need to use that `say` function that was discussed earlier.
@@ -232,6 +242,9 @@ Here's the basic logic that you will need to follow.
 You can have a look at the section below, to learn how to find a specific sequence of characters within a string using python, if you need help.
 
 --- collapse ---
+---
+title: Finding strings in strings
+---
 [[[generic-python-finding-substrings]]]
 --- /collapse ---
 
@@ -257,6 +270,7 @@ Here's a little video showing you how to write the code.
 
 --- /hint ---
 --- /hints ---
+--- /step ---
 
 --- step ---
 --- challenge ---
