@@ -58,9 +58,9 @@ Then just insert your SD card and boot your Raspberry Pi.
 --- step ---
 Once your Raspberry Pi has booted, you're going to need some credentials from Google, for this to work. Follow the steps below to enable the Google Assistant API.
 
---- collapse
+--- collapse ---
 ---
-title: Setting up the Assistance API
+title: Setting up the Assistant API
 ---
 [[[generic-api-google-assistant]]]
 --- /collapse ---
