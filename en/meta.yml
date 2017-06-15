@@ -6,7 +6,7 @@ theme: cc-prototype
 published: false
 steps:
   - title: Introduction
-  - title: What you will learn
+  - title: What you will need
   - title: Solder on the pins 
   - title: Assemble the hardware
   - title: Install the software
