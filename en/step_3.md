@@ -8,7 +8,7 @@ You can solder a set of three header pins to the holes on the board that are in 
 
 You can see the mapping of all the GPIO pins on the following schematic, in case you want to use different GPIO pin.
 
-![voice hat schematic](images/connections.jpg)
+![voice hat schematic](images/aiy_projects_voice_hat_pinout.png)
 
 And here is a photograph showing the three soldered header pins.
 

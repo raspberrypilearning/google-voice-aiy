@@ -28,5 +28,5 @@ Here's a little code to get you started:
 ```
 --- /hint --- --- hint ---
 Here's a little video showing you how to write the code.
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9qVe9gjCSKE" frameborder="0" allowfullscreen></iframe>
 --- /hint --- --- /hints ---
