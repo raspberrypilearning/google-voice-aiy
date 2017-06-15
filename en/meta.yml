@@ -1,10 +1,21 @@
-title: rpi-python-google-aiy
+title: Control LEDs with your voice
 hero_image: images/banner.png
-subtitle: rpi-python-google-aiy subtitle
-description: rpi-python-google-aiy description
+description: Use Google Voice AIY to control LEDs
 original_url: https://codeclubprojects.org/en-GB/scratch/rock-band
 theme: cc-prototype
 published: false
 steps:
-  - title: Step one
-    duration: 60
+  - title: Introduction
+  - title: What you will learn
+  - title: Solder on the pins 
+  - title: Assemble the hardware
+  - title: Install the software
+  - title: Seeting up the Assisstant API
+  - title: Test the API
+  - title: Simple voice responses
+  - title: Making your own actions
+  - title: Controlling an LED
+  - title: Gettign some feedback
+  - title: Using voice_command
+  - title: What Next?
+
