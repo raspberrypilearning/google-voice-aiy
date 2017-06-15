@@ -18,13 +18,13 @@ You can have a look at the section below, to learn how to find a specific sequen
 --- /hint --- --- hint ---
 Here's a little code to get you started:
 ``` pyton
-    def run(self, voice_command):
-		command = 
-		if "on" in command:
-			self.say('Turning LED on')
-			
-		elif #something here :
-			self.say('Turning LED off')
+def run(self, voice_command):
+	command = 
+	if "on" in command:
+		self.say('Turning LED on')
+
+	elif #something here :
+		self.say('Turning LED off')
 ```
 --- /hint --- --- hint ---
 Here's a little video showing you how to write the code.

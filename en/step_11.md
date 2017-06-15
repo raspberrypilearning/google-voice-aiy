@@ -6,27 +6,27 @@ To use the `say` function it needs to be included in the `actor.keyword` call. I
 
 - First you can alter your command section of the script. The `ControlLED` needs to use the `say` function and to be passed a string.
 
-``` python
-    actor.add_keyword('LED', ControlLED(say, 'turning on LED'))
-```
+	``` python
+	actor.add_keyword('LED', ControlLED(say, 'turning on LED'))
+	```
 
 - Now that you're using some parameters with your `ControlLED` class, you need to make sure you can use them in the class' methods. You do this in the initialisation method.
 
-```python
-class ControlLED():
-    """Turns on an LED for 5 seconds"""
+	```python
+	class ControlLED():
+		"""Turns on an LED for 5 seconds"""
 
-    def __init__(self, say, response):
-        self.say = say
-        self.response = response
-```
+		def __init__(self, say, response):
+			self.say = say
+			self.response = response
+	```
 
 - Now within your `run` method you can call `self.say` and pass it `self.response`.
 
-``` python
-    def run(self, voice_command):
-        self.say(self.response)
-        led.on()
-        sleep(5)
-        led.off()
-```
+	``` python
+	def run(self, voice_command):
+		self.say(self.response)
+		led.on()
+		sleep(5)
+		led.off()
+	```

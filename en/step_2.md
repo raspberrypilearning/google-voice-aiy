@@ -8,4 +8,4 @@
 - 47R resistor
 
 ### Software
-- [aiyprojects image](https://dl.google.com/dl/aiyprojects/voice/aiyprojects-latest.img.xz)
+- [aiyprojects image](https://dl.google.com/dl/aiyprojects/voice/aiyprojects-latest.img.xz){:target="_blank"}
