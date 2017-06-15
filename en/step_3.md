@@ -14,4 +14,8 @@ And here is a photograph showing the three soldered header pins.
 
 ![voice hat pins](images/soldered-header.jpg)
 
-If you have never soldered before, and need some help, then have a look at our [Getting Started With Soldering](https://www.raspberrypi.org/learning/getting-started-with-soldering/) resource.
+If you have never soldered before, and need some help, then have a look at our [Getting Started With Soldering](https://www.raspberrypi.org/learning/getting-started-with-soldering/) guide or watch the video below.
+
+--- collapse ---
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8Z-2wPWGnqE" frameborder="0" allowfullscreen></iframe>
+--- /collapse ---
