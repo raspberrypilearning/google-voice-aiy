@@ -1,14 +1,45 @@
 ## Controlling an LED
 
-Now is your chance to try and make an LED turn on and off again when an command is given. Alter the code so that when the command "LED" is spoken, the LED turns on, stays on for 5 seconds, then switches off.
+Now is your chance to try and make an LED turn on and off again when a command is given.
 
---- hints --- --- hint ---
-1. Wire up an LED and a resistor to the header pins you soldered on.
-2. Somewhere near the top of the file, you will need to import the `LED` class from the `gpiozero` module. You'll also want the `sleep` function from the `time` module.
-3. You will want to create an `led` object on pin 17.
-4. When the command to turn on the led is given, the `led.on()` method should be called, there should be a pause for a few seconds, then the `led.off()` method should be called.
---- /hint --- --- hint ---
+- Firstly connect an LED to the header pins you soldered on earlier.
+
 ![circuit](images/led-circuit.jpg)
+
+- The positive (long) leg of the LED should be connected to the middle pin, and the negative leg (short leg) should be connected to the pin on the right of it.
+
+- You'll now need to do the following in the `action.py` file.
+    1. Near the top of the file import the `LED` class from the `gpiozero` module
+	1. Create an `led` object on GPIO 17
+	1. Create an `ControlLED` class that turns the LED on, waits for 5 seconds, and turns the LED off again.
+	1. Create a new voice command to trigger the class, when the letters **LED** are spoken.
+	
+--- hints --- --- hint ---
+- Import the `LED` class and the `sleep` function near the top of the file, where the other imports are.
+- Underneath this set up the led object:
+```python
+led = LED(17)
+```
+- You can use the following code inside a `run` method to make the LED come on and off again:
+```python
+led.on()
+sleep(5)
+led.off()
+```
+--- /hint --- --- hint ---
+- Your voice command should look like this:
+```python
+actor.add_keyword("LED", ControlLED())
+```
+- And here's what your class should look like:
+```python
+class ControlLED():
+    
+    def run(self, voice_command):
+        led.on()
+        sleep(5)
+        led.off()
+```
 --- /hint --- --- hint ---
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fnWZlFZHIJY" frameborder="0" allowfullscreen></iframe>
 --- /hint ---

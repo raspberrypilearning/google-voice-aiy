@@ -10,12 +10,12 @@ steps:
   - title: Solder on the pins 
   - title: Assemble the hardware
   - title: Install the software
-  - title: Seeting up the Assisstant API
+  - title: Setting up the Assistant API
   - title: Test the API
   - title: Simple voice responses
   - title: Making your own actions
   - title: Controlling an LED
-  - title: Gettign some feedback
+  - title: Getting some feedback
   - title: Using voice_command
   - title: What Next?
 

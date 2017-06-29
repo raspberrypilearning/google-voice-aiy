@@ -9,5 +9,5 @@ Your **secrets** file that you downloaded will be called something like `client_
 To do this, open a terminal and type:
 
 ```bash
-mv cline_secret* assistant.json
+mv Downloads/client_secret* assistant.json
 ```
