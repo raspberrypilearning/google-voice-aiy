@@ -5,7 +5,7 @@
 - Google AIY Voice Kit
 - An LED
 - 2 x male-female jumper leads
-- 47R resistor
+- 50-100Ω resistor
 
 ### Software
 - [aiyprojects image](https://dl.google.com/dl/aiyprojects/voice/aiyprojects-latest.img.xz){:target="_blank"}
