@@ -19,8 +19,8 @@ Here's what you're going to do:
 
 - Within your run method, convert the `voice_command` string into all lower case
 - Search through the string.
-    - If it contains the word **on**, turn the LED on
-    - If it contains the word **off**, turn the LED off
+    - If it contains the word "on", turn the LED on
+    - If it contains the word "off", turn the LED off
 
 - You can have a look at the section below to learn how to find a specific sequence of characters within a string using Python.
 
