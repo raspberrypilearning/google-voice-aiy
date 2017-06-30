@@ -1,6 +1,6 @@
 title: Control LEDs with your voice
 hero_image: images/banner.png
-description: Use Google Voice AIY to control LEDs
+description: Use the Google Voice AIY kit to control LEDs
 original_url: https://codeclubprojects.org/en-GB/scratch/rock-band
 theme: cc-prototype
 published: false
@@ -17,5 +17,5 @@ steps:
   - title: Controlling an LED
   - title: Using the say function
   - title: Using voice_command
-  - title: What Next?
+  - title: What next?
 
