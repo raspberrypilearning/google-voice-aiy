@@ -13,7 +13,7 @@ def run(self, voice_command):
 	led.off()
 ```
 
-This `voice_command` that is automatically passed to your `run` method is a string translation of whatever the Google Assistant API *thinks* you said. It's not always 100% accuate. 
+This `voice_command` that is automatically passed to your `run` method is a string translation of whatever the Google Assistant API thinks you said. (It makes mistakes sometimes.)
 
 Here's what you're going to do:
 
