@@ -13,3 +13,7 @@ This resource covers elements from the following strands of the [Raspberry Pi Di
 - [Combine inputs and/or outputs to create projects or solve a problem](https://www.raspberrypi.org/curriculum/physical-computing/builder)
 - [Use basic materials and tools to create project prototypes](https://www.raspberrypi.org/curriculum/manufacture/creator)
 
+<video width="560" height="315" controls>
+<source src="images/completed.mp4" type="video/webm">
+Your browser does not support WebM video, try FireFox or Chrome
+</video>
