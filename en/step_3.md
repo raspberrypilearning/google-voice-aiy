@@ -2,7 +2,7 @@
 
 In this project, you're going to use the Voice Kit to make an LED blink in response to a voice command. If you can make an LED, then there really are very few limits to what you can control.
 
-The first thing to do is to set up the Voice Kit HAT. As you will be controlling an LED, you will need to use some soldered header pins to allow you to access the GPIO pins of the Raspberry Pi
+The first thing to do is to set up the Voice HAT. As you will be controlling an LED, you will need to use some soldered header pins to allow you to access the GPIO pins of the Raspberry Pi
 
 You can solder a set of three header pins to the holes on the board that are in the column of **Drivers**. In particular, you want row **1**.
 
