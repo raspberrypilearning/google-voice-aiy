@@ -13,4 +13,6 @@ unxz aiyprojects-2017-05-03.img.xz
 
 On Windows or MacOS [**Etcher**](https://etcher.io/){:target="_blank"} should handle this for you.
 
-Then just insert your SD card and boot your Raspberry Pi.
+Then just insert your SD card and boot your Raspberry Pi. Your button should be slowly  pulsing and your desktop should look like this:
+
+![desktop](images/desktop.png)

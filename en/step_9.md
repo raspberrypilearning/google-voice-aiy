@@ -15,15 +15,25 @@ Now it's time to make your own actions. As well as responding to particular comm
 - An action is the thing that you want your voice kit to do. Below is about the most basic action you can come up with.
 
 	```python
+	# =========================================
+	# Makers! Implement your own actions here.
+	# =========================================
+	
 	class PrintHelloWorld():
 
 		def run(self, voice_command):
 			print("Hello World!")
 	```
+- Within the class `PrintHelloWorld()` is a single function called `run()`. Functions inside classes are called **methods**. This method will be automatically used by the Voice Kit software.
 
-- All this will do is print `Hello World!` to the console when you run the program, and the `run` method is called. To get this to happen you need to add another voice command. Scroll back down to where you added the previous voice command and add this in:
+- All this class will do is print `Hello World!` to the console when you run the program, when the `run` method is called. To get this to happen you need to add another voice command. Scroll back down to where you added the previous voice command and add in another `keyword`.
 
 	```python
+	# =========================================
+	# Makers! Add your own voice commands here.
+	# =========================================
+	
+	actor.add_keyword("what's up", SpeakAction(say, "I'm fine, thank you"))
 	actor.add_keyword("hello world", PrintHelloWorld())
 	```
 

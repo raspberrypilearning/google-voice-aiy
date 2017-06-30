@@ -15,7 +15,7 @@ steps:
   - title: Simple voice responses
   - title: Making your own actions
   - title: Controlling an LED
-  - title: Getting some feedback
+  - title: Using the say function
   - title: Using voice_command
   - title: What Next?
 

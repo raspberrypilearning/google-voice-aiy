@@ -2,7 +2,7 @@
 
 The AIY Voice kit software allows you to add your own simple voice commands that will provide simple responses.
 
-- Using a text editor or IDLE, open the file called `action.py`. You can find it at `/home/pi/voice-recognizer-raspi/src/action.py`.
+- Using a text editor or IDLE (**Menu** --> **Programming** --> **Python 3 (IDLE)**, open the file called `action.py`. You can find it at `/home/pi/voice-recognizer-raspi/src/action.py`.
 
 - Most of this file contains instructions on how to use it, but if you scroll down, you will eventuall come to the following comments:
   
@@ -24,6 +24,8 @@ The AIY Voice kit software allows you to add your own simple voice commands that
 
 - So what does this line do? `actor.add_keyword("what's up"` instructs the code to listen out for the keywords **"what's up"** to be spoken by the user. `SpeakAction(say, "I'm fine, thank you")`, instructs the program to respond with the words `"I'm fine, thank you"`
 
-- Have a go at running this code, and test that it's working.
+- Have a go at running this code, and test that it's working. You'll need to go back to the terminal window, press `Ctrl + C` if the progam is currently running, and then type `src/main.py` to restart the Voice Kit software.
+
+- Push the button and then ask the Voice Kit **"What's up?"**
 
 - Now try adding your own set of keywords and responses underneath the one you have just written.
