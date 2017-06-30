@@ -29,7 +29,7 @@ Here's what you're going to do:
 Don't worry if you're completely stuck - the hints below can help you out.
 
 --- hints --- --- hint ---
-- Your trigger should remain the same: it should be the "LED" keyword
+- Your trigger should remain the same: it should be the "LED" keyword.
 - Within the `run` method, create a new variable called `command` that is equal to the `voice_command`, but converted to lower case.
 - If the string `on` is in the `command` string, then the LED can turn on.
 - If the string `off` is in the `command` string, then turn the LED off.
