@@ -2,13 +2,13 @@
 
 With the hardware and software all set up, you need to test that your Voice Kit is working.
 
-- Click on the **Start dev terminal** icon on the desktop to open a terminal.
+- Click on the **Start dev terminal** icon on the desktop to open a terminal window.
 
 	![icon](images/dev-icon.png)
 
 - To start the **Voice Kit** program manually, you can simply type `src/main.py` into the terminal.
 
-- If this is your first time running the kit's program, **Chromium** will open and ask you to login and authorise the use of the Google API.
+- If it is your first time running this program, **Chromium** will open and ask you to login and authorise the use of the Google API.
 
 	![google auth](images/api-consent-screen.png)
 
