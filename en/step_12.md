@@ -42,7 +42,7 @@ def run(self, voice_command):
 		self.say('Turning LED on')
 		## turn on the LED
 
-	elif #something here :
+	elif ## something here :
 		self.say('Turning LED off')
 		## turn off the LED
 ```
