@@ -1,6 +1,6 @@
 ## Using `voice_command`
 
-Now that you can turn the LED on with a voice command, it would be nice if you could get it to stay on, until another voice command turns it off again.
+Now that you can turn the LED on with a voice command, it would be nice if you could get it to stay on until another voice command turns it off again.
 
 If you have a look at the `run` method you created, you should be able to see that it has a `voice_command` parameter.
 
@@ -15,27 +15,26 @@ def run(self, voice_command):
 
 This `voice_command` that is automatically passed to your `run` method is a string translation of whatever the Google Assistant API *thinks* you said. It's not always 100% accuate. 
 
-Here's what you're going to do.
+Here's what you're going to do:
 
-- Within your run method, convert the `voice_command` string into all lower case.
-- Search through the string and if it contains the word **on**:
-    - turn on the LED
-- If the `voice_command` string contains the word **off**
-    -  turn the LED off.
+- Within your run method, convert the `voice_command` string into all lower case
+- Search through the string. if it contains the word **on**:
+    - If it contains the word **on**, turn the LED on
+    - If it contains the word **off**, turn the LED off
 
-- You can have a look at the section below, to learn how to find a specific sequence of characters within a string using python.
+- You can have a look at the section below to learn how to find a specific sequence of characters within a string using Python.
 
 [[[generic-python-finding-substrings]]]
 
 Don't worry if you're completely stuck - the hints below can help you out.
 
 --- hints --- --- hint ---
-- Your trigger should remain the same - listening for the LED key word.
-- Within the `run` method create a new varaible called `command` that is equal to the `voice_command`, but converted to lowercase.
-- If the string `on` is in the `command` string then the LED can turn on.
-- If the string `off` is in the `command` string then turn the LED off.
+- Your trigger should remain the same: it should be the "LED" keyword
+- Within the `run` method, create a new variable called `command` that is equal to the `voice_command`, but converted to lower case.
+- If the string `on` is in the `command` string, then the LED can turn on.
+- If the string `off` is in the `command` string, then turn the LED off.
 --- /hint --- --- hint ---
-Here's a little code to get you started:
+Here's a bit of code to get you started:
 ``` pyton
 def run(self, voice_command):
 	command = ## make it all lower case
@@ -48,6 +47,6 @@ def run(self, voice_command):
 		## turn off the led
 ```
 --- /hint --- --- hint ---
-Here's a little video showing you how to write the code.
+Here's a little video showing you how to write the code:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9qVe9gjCSKE" frameborder="0" allowfullscreen></iframe>
 --- /hint --- --- /hints ---
