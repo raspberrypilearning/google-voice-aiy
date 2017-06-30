@@ -10,7 +10,7 @@ Now it's time to make your own actions. As well as responding to particular comm
 # =========================================
 ```
 
-- Below this you can add your own **actions**. An action is the thing that you want your Voice Kit to do. Below is about the most basic action you can come up with. Don't worry if you've never written a **class** before, as it can be kept fairly simple.
+- Below it you can add your own **actions**. An action is the thing that you want your Voice Kit to do. Below is about the most basic action you can come up with. Don't worry if you've never written a **class** before, as it can be kept fairly simple.
 
 	```python
 	# =========================================
@@ -22,7 +22,7 @@ Now it's time to make your own actions. As well as responding to particular comm
 		def run(self, voice_command):
 			print("Hello World!")
 	```
-- Within the class `PrintHelloWorld()` is a single function called `run()`. Functions inside classes are called **methods**. This method will be automatically used by the Voice Kit software.
+- Within the class `PrintHelloWorld()` is a single function called `run()`. Functions inside classes are called **methods**. This method will be used automatically by the Voice Kit software.
 
 - All this class will do is print `Hello World!` to the console when the `run` method is called. To make this happen, you need to add another voice command. Scroll back down to where you added the previous voice command and add in another `keyword`.
 
