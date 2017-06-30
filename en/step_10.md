@@ -2,7 +2,7 @@
 
 Now is your chance to try and make an LED turn on and off again when a command is given.
 
-- Firstly connect an LED to the header pins you soldered on earlier.
+- Firstly, connect an LED to the header pins you soldered on earlier.
 
 ![circuit](images/led-circuit.jpg)
 
@@ -10,15 +10,15 @@ Now is your chance to try and make an LED turn on and off again when a command i
 
 - You'll now need to do the following in the `action.py` file.
     1. Near the top of the file import the `LED` class from the `gpiozero` module
-	1. Create an `led` object on GPIO 17
-	1. Create a `ControlLED` class that turns the LED on, waits for 5 seconds, and turns the LED off again.
-	1. Create a new voice command to trigger the class, when the letters **LED** are spoken.
+	1. Create an `led` object on **GPIO 17**
+	1. Create a `ControlLED` class that turns the LED on, waits for 5 seconds, and turns the LED off again
+	1. Create a new voice command to trigger the class when the letters "LED" are spoken
 	
 - Have a look at the hints below if you're not sure how to proceed.
 
 --- hints --- --- hint ---
-- Import the `LED` class and the `sleep` function near the top of the file, where the other imports are.
-- Underneath this set up the led object:
+- Import the `LED` class and the `sleep` function near the top of the file, where the other imports are
+- Underneath this set up the `led` object:
   ```python
   led = LED(17)
   ```
