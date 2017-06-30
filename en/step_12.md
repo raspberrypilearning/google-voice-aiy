@@ -18,7 +18,7 @@ This `voice_command` that is automatically passed to your `run` method is a stri
 Here's what you're going to do:
 
 - Within your run method, convert the `voice_command` string into all lower case
-- Search through the string. if it contains the word **on**:
+- Search through the string.
     - If it contains the word **on**, turn the LED on
     - If it contains the word **off**, turn the LED off
 
