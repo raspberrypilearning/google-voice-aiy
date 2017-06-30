@@ -44,7 +44,7 @@ def run(self, voice_command):
 
 	elif #something here :
 		self.say('Turning LED off')
-		## turn off the led
+		## turn off the LED
 ```
 --- /hint --- --- hint ---
 Here's a little video showing you how to write the code:
