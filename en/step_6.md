@@ -1,10 +1,10 @@
 ## Setting up the Assistant API
 
-Once your Raspberry Pi has booted, you're going to need some credentials from Google, for this to work. Follow the steps below to enable the Google Assistant API.
+Once your Raspberry Pi has booted, you're going to need some credentials from Google for the kit to work. Follow the steps below to enable the Google Assistant API.
 
 [[[generic-api-google-assistant]]]
 
-Your **secrets** file that you downloaded will be called something like `client_secret_89351974213-jsno1i2s7lu9mv4q9bjbf3pas6cpnbe5.apps.googleusercontent.com.json`. This needs renaming and placing in your `/home/pi` directory. The new name should be `assistant.json`.
+The **secrets** file that you downloaded will be called something like `client_secret_89351974213-jsno1i2s7lu9mv4q9bjbf3pas6cpnbe5.apps.googleusercontent.com.json`. You need to rename it `assistant.json` and place it in your `/home/pi` directory.
 
 To do this, open a terminal and type:
 
