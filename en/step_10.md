@@ -9,7 +9,7 @@ Now is your chance to try and make an LED turn on and off again when a command i
 - The positive (long) leg of the LED should be connected to the middle pin, and the negative leg (short leg) should be connected to the pin on the right of it.
 
 - You'll now need to do the following in the `action.py` file.
-    1. Near the top of the file import the `LED` class from the `gpiozero` module
+    1. Near the top of the file, import the `LED` class from the `gpiozero` module
 	1. Create an `led` object on **GPIO 17**
 	1. Create a `ControlLED` class that turns the LED on, waits for 5 seconds, and turns the LED off again
 	1. Create a new voice command to trigger the class when the letters "LED" are spoken
