@@ -7,9 +7,9 @@ duration: 3
 ingredient: false
 copyedit: true
 listed: true
-curriculum: 
-interests:
-technologies: "physical computing"
+curriculum: developer design-0, programming-3, phys-comp-2, manufacture-1, community-0
+interests: ""
+technologies: "physical computing, python"
 steps:
   - title: Introduction
   - title: What you will need
