@@ -12,7 +12,7 @@ You can see the mapping of all the GPIO pins on the following schematic, in case
 
 And here is a photograph showing the three soldered header pins:
 
-![voice hat pins](images/soldered-header.jpg)
+![voice hat pins](images/soldered-header.png)
 
 If you have never soldered before, and need some help, then have a look at our [Getting started with soldering](https://www.raspberrypi.org/learning/getting-started-with-soldering/){:target="_blank"} guide, or watch the video below.
 

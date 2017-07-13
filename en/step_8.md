@@ -4,7 +4,7 @@ The AIY Voice Kit software allows you to add your own simple voice commands that
 
 - Using a text editor or IDLE (**Menu** --> **Programming** --> **Python 3 (IDLE)**, open the file called `action.py`. You can find it in `/home/pi/voice-recognizer-raspi/src/action.py`.
 
-- Most of this file consists of instructions on how to use the kit, but if you scroll down, you will eventuall come to the following comments:
+- Most of this file consists of instructions on how to use the kit, but if you scroll down, you will eventually come to the following comments:
   
 	``` python
 	# =========================================
@@ -12,7 +12,7 @@ The AIY Voice Kit software allows you to add your own simple voice commands that
 	# =========================================
 	```
 
-- Here's where you can add some simple voice commands and the response you would like receive back. Below the comment, you can now add your own actions. Try adding the following lines - make sure that you keep the indentation.
+- Here's where you can add some simple voice commands and the response you would like to receive back. Below the comment, you can now add your own actions. Try adding the following lines - make sure that you keep the indentation.
 
 	``` python
 	# =========================================
