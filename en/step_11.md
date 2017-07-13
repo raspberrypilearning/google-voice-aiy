@@ -1,6 +1,5 @@
 ## Using the `say` function
 
-
 It would be nice if you could get the class you have written to give some verbal feedback when the LED switches on and off again. To do this, you will need to use the special `say` function.
 
 If you want to use the `say` function in your classes, it needs to be included in the `actor.keyword` call.
