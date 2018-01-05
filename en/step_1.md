@@ -1,6 +1,6 @@
 ## Controlling the world with Google AIY
 
-The Google AIY Voice Kit came free with the May 2017 print issue of the MagPi, so well done if you have gotten your hands on one. If you haven't yet managed to acquire a Voice Kit, you can join the mailing list to receive a notification when they become commercially available by signing up [here](https://docs.google.com/forms/d/e/1FAIpQLSev7IQBFUaDlv5tx1Decxd5Ya5AqYSEvD72hJySeaRDogaqAw/viewform?c=0&w=1).
+The Google AIY Projects Voice kit came free with the May 2017 print issue of The MagPi, and you can now also buy it from many electronics suppliers.
 
 ### What you will learn
 - How to connect an LED to the AIY Voice Kit
