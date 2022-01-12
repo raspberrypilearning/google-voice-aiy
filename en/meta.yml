@@ -1,7 +1,8 @@
+---
 title: Control LEDs with your voice
 hero_image: images/banner.png
 description: Use the Google Voice AIY kit to control LEDs
-original_url: 
+original_url:
 theme: green
 duration: 3
 ingredient: false
@@ -15,9 +16,10 @@ software: python
 site_areas: projects
 version: 4
 last_tested: 2017-01-01
-steps: 
+steps:
 - title: Introduction
 - title: What you will need
+  completion: engaged
 - title: Solder on the pins
 - title: Assemble the hardware
 - title: Install the software
@@ -27,5 +29,6 @@ steps:
 - title: Making your own actions
 - title: Controlling an LED
 - title: Using the say function
+  completion: internal
 - title: Using voice_command
 - title: What next?
