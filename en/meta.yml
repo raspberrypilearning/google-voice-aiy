@@ -7,7 +7,7 @@ theme: green
 duration: 3
 ingredient: false
 copyedit: true
-listed: true
+listed: false
 curriculum: 3, design-0, programming-3, phys-comp-2, manufacture-1, community-0
 interests: ''
 technologies: electronic-components, python
